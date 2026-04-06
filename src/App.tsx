@@ -1,5 +1,5 @@
-import { Header } from "./components/header.tsx";
-import { Footer } from "./components/footer.tsx";
+import { Header } from "./components/layout/header.tsx";
+import { Footer } from "./components/layout/footer.tsx";
 type AppProps = {
   children: React.ReactNode
 }

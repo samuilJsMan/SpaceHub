@@ -1,0 +1,26 @@
+{
+  "header":{
+    "Explore":"/explore",
+    "MyBookings":"/mybookings",
+    "Help":"/help",
+    "SignIn":"/signin",
+    "login":"/login"
+  },
+  "footer":{
+    "share":"#",
+    "internet":"#",
+    "language":"#",
+    "TheLoftBlog": "#" ,
+    "MemberEvents": "#" ,
+    "DesignGuidelines": "#",
+    "ReferralProgram": "#",
+    "AboutOurVision": "#",
+    "GlobalLocations": "#",
+    "EnterprisePartners": "#",
+    "Careers": "#",
+    "PrivacyPolicy": "#",
+    "TermsOfService": "#",
+    "HelpCenter": "#",
+    "TrustAndSafety":"#"
+  }
+}

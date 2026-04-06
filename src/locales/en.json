@@ -1,0 +1,58 @@
+{
+  "PageName": "SpaceHub",
+  "header": {
+    "Explore": "Explore",
+    "MyBookings": "My Bookings",
+    "Help": "Help",
+    "SignIn": "Log in",
+    "SignUp": "Sign Up"
+  },
+  "main":{
+    "intro":{
+      "title":["The workspace,","reimagined."],
+      "description":"The Digital Concierge for architectural lounges and functional spaces tailored for your peak productivity.",
+      "searchBar":{
+        "select":["Location","Date","Duration"],
+        "button":"Find Space"
+      }
+    }
+  },
+  "footer":{
+    "about":{
+      "info":"Premium environments for global creators.We curate, you create. 40+ citiesworldwide."
+    },
+    "company":{
+      "title":"Company",
+      "list":[
+        "About Our Vision",
+        "Global Locations",
+        "Enterprise Partners",
+        "Careers"
+      ]
+    },
+    "community":{
+      "title":"Community",
+      "list":[
+        "The Loft Blog",
+        "Member Events",
+        "Design Guidelines",
+        "Referral Program"
+      ]
+    },
+    "support":{
+      "title":"Support",
+      "list":[
+        "Help Center",
+        "Trust & Safety",
+        "Privacy Policy",
+        "Terms of Service"
+      ]
+    },
+    "license":"© 2024 SpaceHub Inc. All rights reserved.",
+    "languages":[
+      "English (US)",
+      "Ukrainian (UA)"
+    ],
+    "currency":"USD ($)"
+  }
+}

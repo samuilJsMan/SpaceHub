@@ -1,3 +1,9 @@
+html{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 body {
   padding: 0;
   margin: 0;
@@ -10,7 +16,12 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-  scrollbar-gutter: stable; 
+}
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
 }
 a{
   text-decoration: none;
@@ -60,6 +71,52 @@ a{
 .primaryButton:hover, .primaryButtonOpen{
   background-color: rgba(37, 99, 235, 1);
   color: rgba(247, 247, 255, 1);
+}
+.select{
+  position: relative;
+  .optionsList{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    .option{
+      transition: 0.2s;
+      &:hover{
+        color: rgb(37, 99, 235);
+      }
+    }
+  }
+  &:hover .optionsList{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.2s;
+  }
+  &::after{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgb(88, 96, 101);
+    border-bottom: 2px solid rgb(88, 96, 101);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -65%) rotate(45deg);
+    transition: 0.2s;
+  } 
+  &:hover::after{
+    transform: translate(0, -35%) rotate(225deg);
+  }
 }
 #root {
   background-color: white;
@@ -115,9 +172,113 @@ a{
     max-width: 1280px;
     .section {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
       padding-left: 32px;
       padding-right: 32px;
+    }
+    .intro{
+      background: 
+      linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, #F8F9FB 100%),
+      url("./assets/Modern\ Coworking\ Space.png");
+      background-size: 100% calc(100% + 1px);
+      background-position: center;
+      padding-top: 150px;
+      padding-bottom: 158px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title{
+        width: fit-content;
+        margin-bottom: 24px;
+        &>div{
+          text-align: center;
+          font-weight: 800;
+          font-size: 72px;
+          line-height: 72px;
+          letter-spacing: -3.6px;
+          text-align: center;
+          vertical-align: middle;
+        }
+        .top{
+          color:rgba(43, 52, 56, 1);
+        }
+        .bottom{
+          color: rgba(37, 99, 235, 1);
+        }
+      }
+      .description{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32.5px;
+        letter-spacing: 0px;
+        text-align: center;
+        vertical-align: middle;
+        color: rgba(43, 52, 56, 1);
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        max-width: 672px;
+        padding: 8px 0;
+        margin: 0;
+        margin-bottom: 56px;
+      }
+      .searchBar{
+        width: 1008px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 8px; 
+        box-shadow: 0px 0px 0px 8px rgba(241, 244, 247, 1) ;
+        display: flex;
+        gap: 8px;
+        padding: 12px;
+        .chose{
+          width: 100%;
+          height: 60px;
+          border-right: 1px solid rgba(171, 179, 185, 0.15);
+          display: flex;
+          flex-direction: column;
+          padding: 8px 16px;
+          gap: 4px;
+          .label{
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color:rgba(88, 96, 101, 1);
+          }
+          .selected{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            vertical-align: middle;
+            color: rgba(43, 52, 56, 1);
+          }
+          img{
+            transform: translate(0, 2px);
+            margin-right: 4px;
+          }
+        }
+        .buttonWrapper{
+          width: 100%;
+          height: 60px;
+          .searchButton{
+            width: 100%;
+            height: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: center;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            svg{
+              transform: translate(0px, -1px);
+            }
+          }
+        }
+      }
     }
   }
   .footer {
@@ -155,10 +316,15 @@ a{
           &>a{
             display: block;
             font-weight: 500;
+            width: fit-content;
             font-size: 14px;
             line-height: 20px;
             letter-spacing: 0px;
             color:rgba(88, 96, 101, 1);
+            transition: 0.3s;
+            &:hover{
+              color: rgba(37, 99, 235, 1);
+            }
           }
         }
         .name{
@@ -185,25 +351,27 @@ a{
           .iconButton{
             outline: none;
             border: none;
-            display: block;
+            display: flex;
             height: 40px;
             aspect-ratio: 1/1;
             background-color: rgba(241, 244, 247, 1);
             border-radius: 50%;
-            &:nth-child(1){
-             background-image: url("./assets/share.png");
-             background-repeat: no-repeat;
-             background-position: center;
+            transition: 0.3s;
+            align-items: center;
+            justify-content: center;
+            svg{
+              width: 16px;
+              aspect-ratio: 1;
+              background-repeat: no-repeat;
+              background-position: center;
+              transition: 0.3s;
+              color: rgb(88, 96, 101);
             }
-            &:nth-child(2){
-             background-image: url("./assets/internet.png");
-             background-repeat: no-repeat;
-             background-position: center;
-            }
-            &:nth-child(3){
-             background-image: url("./assets/language.png");
-             background-repeat: no-repeat;
-             background-position: center;
+            &:hover{
+              background-color: rgb(37, 99, 235);
+              svg{
+                color: white;
+              }
             }
           }
         }
@@ -237,11 +405,13 @@ a{
           padding: 8px 12px;
         }
         .languageSelect{
-          width: 124px;
+          min-width: 124px;
+          flex-grow: 1;
+
         }
         .usd{
           padding-right: 0;
-          flex-grow: 1;
+          flex-grow: 0;
           text-align: end;
         }
       }

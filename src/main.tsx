@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./main.scss";
 import App from "./App.tsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./i18n";
 
 import { MyBookings } from "./pages/MyBookings.tsx";
 import { Explore } from "./pages/Explore.tsx";
