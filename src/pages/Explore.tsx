@@ -5,10 +5,32 @@ import MagnefiyngGlass from "../components/SVGs/MagnefiyngGlassSVG";
 import point from "../assets/point.png";
 import date from "../assets/date.png";
 import time from "../assets/time.png";
+import search from "../assets/search.png";
+import book from "../assets/book.png";
+import work from "../assets/work.png";
 const Explore = () => {
   const { t } = useTranslation();
+  const guideCards = [
+    {
+      icon: search,
+      title: t("main.guide.cards.0.title"),
+      description: t("main.guide.cards.0.description")
+    },
+    {
+      icon: book,
+      title: t("main.guide.cards.1.title"),
+      description: t("main.guide.cards.1.description")
+    },
+    {
+      icon: work,
+      title: t("main.guide.cards.2.title"),
+      description: t("main.guide.cards.2.description")
+    }
+  ];
+
   return (
-    <Section className="intro">
+    <>  
+      <Section className="intro">
       <h1 className="title">
         <div className="top">{t("main.intro.title.0")}</div>
         <div className="bottom">{t("main.intro.title.1")}</div>
@@ -45,7 +67,25 @@ const Explore = () => {
           </PrimaryButton>
         </div>
       </div>
-    </Section>
+      </Section>
+      <Section className="guide">
+        <div className="description">
+          <h2>{t("main.guide.title")}</h2>
+          <p>{t("main.guide.description")}</p>
+        </div>
+        <div className="cards">
+          {guideCards.map((card) => (
+            <div className="card" key={card.title}>
+              <div className="iconContainer">
+                <img className="icon" src={card.icon} alt="" />
+              </div>
+              <div className="title">{card.title}</div>
+              <div className="description">{card.description}</div>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-html{
+html {
   width: 100%;
   height: 100%;
   padding: 0;
@@ -17,21 +17,21 @@ body {
 *::after {
   box-sizing: border-box;
 }
-*{
+* {
   padding: 0;
   margin: 0;
   outline: none;
   border: none;
 }
-a{
+a {
   text-decoration: none;
 }
-.navButton{
+.navButton {
   color: rgba(71, 85, 105, 1);
   position: relative;
   transition: 0.3s;
 }
-.navButton::after{
+.navButton::after {
   content: "";
   display: block;
   width: 100%;
@@ -42,10 +42,12 @@ a{
   left: 0;
   transition: 0.3s;
 }
-.navButton:hover, .navButtonOpened{
+.navButton:hover,
+.navButtonOpened {
   color: rgba(37, 99, 235, 1);
 }
-.navButton:hover::after,.navButtonOpened::after {
+.navButton:hover::after,
+.navButtonOpened::after {
   content: "";
   display: block;
   width: 100%;
@@ -56,7 +58,7 @@ a{
   left: 0;
 }
 
-.primaryButton{
+.primaryButton {
   color: rgba(71, 85, 105, 1);
   display: block;
   height: 44px;
@@ -68,13 +70,14 @@ a{
   transition: 0.3s;
   border-radius: 8px;
 }
-.primaryButton:hover, .primaryButtonOpen{
+.primaryButton:hover,
+.primaryButtonOpen {
   background-color: rgba(37, 99, 235, 1);
   color: rgba(247, 247, 255, 1);
 }
-.select{
+.select {
   position: relative;
-  .optionsList{
+  .optionsList {
     visibility: hidden;
     opacity: 0;
     transition: 0.2s;
@@ -89,19 +92,19 @@ a{
     flex-direction: column;
     gap: 8px;
     width: 100%;
-    .option{
+    .option {
       transition: 0.2s;
-      &:hover{
+      &:hover {
         color: rgb(37, 99, 235);
       }
     }
   }
-  &:hover .optionsList{
+  &:hover .optionsList {
     visibility: visible;
     opacity: 1;
     transition: 0.2s;
   }
-  &::after{
+  &::after {
     content: "";
     display: block;
     width: 8px;
@@ -113,8 +116,8 @@ a{
     right: 10px;
     transform: translate(0, -65%) rotate(45deg);
     transition: 0.2s;
-  } 
-  &:hover::after{
+  }
+  &:hover::after {
     transform: translate(0, -35%) rotate(225deg);
   }
 }
@@ -175,10 +178,15 @@ a{
       padding-left: 32px;
       padding-right: 32px;
     }
-    .intro{
-      background: 
-      linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 50%, #F8F9FB 100%),
-      url("./assets/Modern\ Coworking\ Space.png");
+    .intro {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          #f8f9fb 100%
+        ),
+        url("./assets/ModerCoworkingSpace.png");
       background-size: 100% calc(100% + 1px);
       background-position: center;
       padding-top: 150px;
@@ -186,10 +194,10 @@ a{
       display: flex;
       flex-direction: column;
       align-items: center;
-      .title{
+      .title {
         width: fit-content;
         margin-bottom: 24px;
-        &>div{
+        & > div {
           text-align: center;
           font-weight: 800;
           font-size: 72px;
@@ -198,14 +206,14 @@ a{
           text-align: center;
           vertical-align: middle;
         }
-        .top{
-          color:rgba(43, 52, 56, 1);
+        .top {
+          color: rgba(43, 52, 56, 1);
         }
-        .bottom{
+        .bottom {
           color: rgba(37, 99, 235, 1);
         }
       }
-      .description{
+      .description {
         font-weight: 500;
         font-size: 20px;
         line-height: 32.5px;
@@ -220,15 +228,15 @@ a{
         margin: 0;
         margin-bottom: 56px;
       }
-      .searchBar{
+      .searchBar {
         width: 1008px;
         background-color: rgba(255, 255, 255, 1);
-        border-radius: 8px; 
-        box-shadow: 0px 0px 0px 8px rgba(241, 244, 247, 1) ;
+        border-radius: 8px;
+        box-shadow: 0px 0px 0px 8px rgba(241, 244, 247, 1);
         display: flex;
         gap: 8px;
         padding: 12px;
-        .chose{
+        .chose {
           width: 100%;
           height: 60px;
           border-right: 1px solid rgba(171, 179, 185, 0.15);
@@ -236,15 +244,15 @@ a{
           flex-direction: column;
           padding: 8px 16px;
           gap: 4px;
-          .label{
+          .label {
             font-weight: 700;
             font-size: 10px;
             line-height: 15px;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color:rgba(88, 96, 101, 1);
+            color: rgba(88, 96, 101, 1);
           }
-          .selected{
+          .selected {
             font-weight: 600;
             font-size: 16px;
             line-height: 24px;
@@ -252,15 +260,15 @@ a{
             vertical-align: middle;
             color: rgba(43, 52, 56, 1);
           }
-          img{
+          img {
             transform: translate(0, 2px);
             margin-right: 4px;
           }
         }
-        .buttonWrapper{
+        .buttonWrapper {
           width: 100%;
           height: 60px;
-          .searchButton{
+          .searchButton {
             width: 100%;
             height: 100%;
             font-weight: 700;
@@ -273,9 +281,90 @@ a{
             align-items: center;
             justify-content: center;
             gap: 8px;
-            svg{
+            svg {
               transform: translate(0px, -1px);
             }
+          }
+        }
+      }
+    }
+    .guide {
+      padding-top: 96px;
+      padding-bottom: 96px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 64px;
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          color: rgba(43, 52, 56, 1);
+          margin-bottom: 16px;
+          font-weight: 800;
+          font-size: 30px;
+          line-height: 36px;
+          letter-spacing: 0px;
+          text-align: center;
+          vertical-align: middle;
+        }
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0px;
+          text-align: center;
+          vertical-align: middle;
+          color: rgba(88, 96, 101, 1);
+        }
+      }
+      .cards {
+        width: 1024px;
+        display: flex;
+        justify-content: space-between;
+        .card {
+          width: 180px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .iconContainer {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(216, 226, 255, 1);
+            border-radius: 50%;
+            box-sizing: content-box;
+            box-shadow:
+              0px 0px 0px 4px rgba(255, 255, 255, 1),
+              0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+          }
+          .title {
+            text-align: center;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0px;
+            vertical-align: middle;
+            color: rgba(43, 52, 56, 1);
+          }
+          .description {
+            text-align: center;
+            font-family: Inter;
+            font-weight: 300;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: center;
+            vertical-align: middle;
+
+            color: rgba(88, 96, 101, 1);
           }
         }
       }
@@ -289,16 +378,16 @@ a{
     flex-direction: column;
     gap: 80px;
     background-color: rgba(255, 255, 255, 0.8);
-    .info{
+    .info {
       height: 188px;
       display: flex;
       justify-content: space-between;
       gap: 48px;
-      &>div{
+      & > div {
         width: 100%;
         display: flex;
         flex-direction: column;
-        .title{
+        .title {
           font-weight: 700;
           font-size: 16px;
           line-height: 24px;
@@ -307,27 +396,27 @@ a{
           color: rgba(43, 52, 56, 1);
           margin-bottom: 10px;
         }
-        .list{
+        .list {
           margin: 12px 0;
           flex-grow: 1;
           display: flex;
           flex-direction: column;
           gap: 12px;
-          &>a{
+          & > a {
             display: block;
             font-weight: 500;
             width: fit-content;
             font-size: 14px;
             line-height: 20px;
             letter-spacing: 0px;
-            color:rgba(88, 96, 101, 1);
+            color: rgba(88, 96, 101, 1);
             transition: 0.3s;
-            &:hover{
+            &:hover {
               color: rgba(37, 99, 235, 1);
             }
           }
         }
-        .name{
+        .name {
           font-weight: 700;
           font-size: 24px;
           line-height: 32px;
@@ -335,7 +424,7 @@ a{
           vertical-align: middle;
           color: rgba(37, 99, 235, 1);
         }
-        .text{
+        .text {
           font-weight: 500;
           font-size: 14px;
           line-height: 22.75px;
@@ -345,10 +434,10 @@ a{
           margin: 0;
           flex-grow: 1;
         }
-        .linkLine{
+        .linkLine {
           display: flex;
           gap: 16px;
-          .iconButton{
+          .iconButton {
             outline: none;
             border: none;
             display: flex;
@@ -359,7 +448,7 @@ a{
             transition: 0.3s;
             align-items: center;
             justify-content: center;
-            svg{
+            svg {
               width: 16px;
               aspect-ratio: 1;
               background-repeat: no-repeat;
@@ -367,30 +456,29 @@ a{
               transition: 0.3s;
               color: rgb(88, 96, 101);
             }
-            &:hover{
+            &:hover {
               background-color: rgb(37, 99, 235);
-              svg{
+              svg {
                 color: white;
               }
             }
           }
         }
-        
       }
-      .about{
+      .about {
         gap: 24px;
       }
     }
-    .license{
+    .license {
       height: 65px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       color: rgba(115, 124, 129, 1);
-      .licenseText{
+      .licenseText {
         margin: 0 0 8px 0;
       }
-      .options{
+      .options {
         display: flex;
         width: 200px;
         justify-content: space-between;
@@ -400,16 +488,15 @@ a{
         letter-spacing: 0px;
         vertical-align: middle;
         height: 32px;
-        &>div{
+        & > div {
           align-items: center;
           padding: 8px 12px;
         }
-        .languageSelect{
+        .languageSelect {
           min-width: 124px;
           flex-grow: 1;
-
         }
-        .usd{
+        .usd {
           padding-right: 0;
           flex-grow: 0;
           text-align: end;

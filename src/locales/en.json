@@ -15,6 +15,15 @@
         "select":["Location","Date","Duration"],
         "button":"Find Space"
       }
+    },
+    "guide":{
+      "title":"How it Works",
+      "description":"Three simple steps to your next inspiration.",
+      "cards":[
+        {"title":"Search","description":"Filter by vibe, amenities, and global location."},
+        {"title":"Book","description":"Secure your spot instantly with zero hidden fees."},
+        {"title":"Work","description":"Show up and create. We handle the rest."}
+      ]
     }
   },
   "footer":{
