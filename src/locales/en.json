@@ -24,6 +24,16 @@
         {"title":"Book","description":"Secure your spot instantly with zero hidden fees."},
         {"title":"Work","description":"Show up and create. We handle the rest."}
       ]
+    },
+    "spaceNear":{
+      "supText":"Curated Selection",
+      "title":"Inspiring spaces near you",
+      "description":"Hand-picked coworking environments featuring ergonomic design.",
+      "slider":{
+        "types":["Premium Lounge","Industrial Hub","Library Concept"],
+        "details":"Details",
+        "price":"hr"
+      }
     }
   },
   "footer":{
